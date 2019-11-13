@@ -21,7 +21,7 @@ export default new Router({
         },
         {
 			path: "/result",
-			component: () => import("./components/Result.vue")
+			component: () => import("./components/Results/Result.vue")
 		}
 	]
 });
