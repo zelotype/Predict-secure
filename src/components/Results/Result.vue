@@ -7,16 +7,8 @@
           <h1 class="text-3xl mt-2 head-home">Results</h1>
           <output1/>
           <div class="flex flex-wrap mx-auto">
-            <div class="mt-4 w-1/2 px-3">
-                <div class="w-full border text-left p-3 h-64 overflow-y-auto">
-                    <h1>From English dictionery</h1>
-                </div>
-            </div>
-            <div class="mt-4 w-1/2 px-3">
-                <div class="w-full border text-left p-3 h-64 overflow-y-auto">
-                    <h1>From Password frequency lists</h1>
-                </div>
-            </div>
+            <output2/>
+            <output3/>
           </div>
         </div>
       </b-card>
@@ -26,9 +18,13 @@
 
 <script>
 import output1 from "./OutputFromModel"
+import output2 from "./OutputFromDict"
+import output3 from "./OutputFromPwLists"
 export default {
   components: {
-    output1
+    output1,
+    output2,
+    output3
   }
 };
 </script>
