@@ -17,21 +17,19 @@
             placement="top"
             triggers="click"
           >
-            <div>
-              <b-row>
-                <b-col
-                  v-for="element in result.nearAlp"
-                  :key="element"
-                  cols="2"
-                  class="text-center px-px py-px"
+            <b-row class="mx-0 w-full">
+              <b-col
+                v-for="element in result.nearAlp"
+                :key="element"
+                cols="auto"
+                class="text-center px-px py-px"
+              >
+                <b-button
+                  class="model-btn text-black hover:text-black border-transparent hover:border-gray-300"
+                  >{{ element }}</b-button
                 >
-                  <b-button
-                    class="model-btn text-black hover:text-black border-transparent hover:border-gray-300"
-                    >{{ element }}</b-button
-                  >
-                </b-col>
-              </b-row>
-            </div>
+              </b-col>
+            </b-row>
           </b-popover>
         </div>
       </b-row>
