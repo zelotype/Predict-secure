@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="text-center mt-5">
+    <loader v-if="!getResult"/>
+    <div v-else class="text-center mt-5" >
       <b-card class="inline-block border w-9/12 h-full pb-4">
         <div class="card-body">
           <img src="../../assets/images/check.svg" alt class="mx-auto w-1/12" />
@@ -17,14 +18,26 @@
 </template>
 
 <script>
+import Loader from "../Loader"
 import output1 from "./OutputFromModel"
 import output2 from "./OutputFromDict"
 import output3 from "./OutputFromPwLists"
 export default {
+  data(){
+    return{
+      resultLoading: false
+    }
+  },
   components: {
+    Loader,
     output1,
     output2,
     output3
+  },
+  methods:{
+    getResult(){
+      this.resultLoading = true
+    }
   }
 };
 </script>

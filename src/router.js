@@ -22,6 +22,10 @@ export default new Router({
         {
 			path: "/result",
 			component: () => import("./components/Results/Result.vue")
+		},
+		{
+			path: "/loading",
+			component: () => import("./components/Loader.vue")
 		}
 	]
 });
