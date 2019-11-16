@@ -1,13 +1,13 @@
 <template>
   <div class="mt-4 w-1/2 px-3">
-      <div class="w-full border text-left p-3 h-64">
+      <div class="w-full border text-left p-3">
         <h1 class="font-bold">From password frequency lists</h1>
         <div class="border h-32 my-2 px-2 overflow-y-auto">
             <div v-for="password in password_lists" :key="password">
                 <p>{{ password }}</p>
             </div>
         </div>
-        <b-button class="rounded w-full text-white py-2 font-bold border-none my-3">
+        <b-button class="button-colorful rounded w-full text-white py-2 font-bold border-none my-3">
             Download
         </b-button>
       </div>

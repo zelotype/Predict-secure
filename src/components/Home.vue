@@ -9,9 +9,9 @@
             class="mx-auto w-1/5 mt-5"
           />
           <h1 class="text-center text-5xl head-home">
-            Prapawity
-            <br />hackerman
+            Kistrok
           </h1>
+          <p>Sound of Keystroke Reveals Passwords with Neural Network</p>
           <div class="w-full text-center">
             <b-form-file
               accept=".m4a"
@@ -21,7 +21,7 @@
             <br />
             <button
               @click="predict"
-              class="inline-block mt-4 w-1/3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+              class="inline-block mt-4 w-1/3 button-colorful text-white font-bold py-2 px-4 rounded-full"
             >
               Predict
             </button>

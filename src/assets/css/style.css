@@ -17,7 +17,7 @@ body {
 .head-home {
     font-family: 'Supermercado One', cursive;
 }
-button {
+.button-colorful {
 	background: #3494e6; /* fallback for old browsers */
 	background: -webkit-linear-gradient(
 		to right,
@@ -32,6 +32,6 @@ button {
 }
 
 .model-btn {
-	background: #F6F6F6 !important;
+	background: #F6F6F6;
 }
 
