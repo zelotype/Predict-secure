@@ -19,12 +19,12 @@
               placeholder="Choose a .m4a file"
             ></b-form-file>
             <br />
-            <button
+            <b-button
               @click="predict"
               class="inline-block mt-4 w-1/3 button-colorful text-white font-bold py-2 px-4 rounded-full"
             >
               Predict
-            </button>
+            </b-button>
           </div>
         </div>
       </b-card>
