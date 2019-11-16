@@ -10,6 +10,9 @@
           <div class="flex flex-wrap mx-auto">
             <output2/>
             <output3/>
+            <b-button v-on="dowloadAll" class="button-colorful rounded w-80 text-white py-2 font-bold my-3 border-none">
+            Download All Probability Word
+            </b-button>
           </div>
         </div>
       </b-card>
@@ -37,10 +40,17 @@ export default {
   methods:{
     getResult(){
       this.resultLoading = true
+    },
+    dowloadAll(){
+
     }
   }
 };
 </script>
 
 <style>
+.w-80{
+  margin: auto;
+  width: 50%
+}
 </style>
