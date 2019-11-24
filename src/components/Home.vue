@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="text-center mt-5">
+    <Loader v-if="resultLoading"/>
+    <div v-else class="text-center mt-5">
       <b-card class="inline-block border w-9/12 h-full pb-5">
         <div class="card-body">
           <img src="../assets/images/keyboard.svg" alt class="mx-auto w-1/5 mt-5" />
@@ -27,15 +28,21 @@
 
 <script>
 import axios from "axios";
+import Loader from "./Loader";
 export default {
   data() {
     return {
       file: null,
-      data1: {}
+      data1: {},
+      resultLoading: false
     };
+  },
+  components:{
+    Loader
   },
   methods: {
     predict() {
+      this.resultLoading = true;
       let formData = new FormData();
       formData.append("sound", this.file);
       let self = this;

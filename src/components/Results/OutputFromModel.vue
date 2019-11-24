@@ -3,7 +3,7 @@
     <div class="border text-left p-3 mt-4">
       <b-row>
         <b-col cols="2" class="my-auto">
-          <h1 class="font-bold">From model</h1>
+          <h1 class="font-bold">From Model</h1>
         </b-col>
         <div v-for="(result, index) in results" :key="result">
           <b-button
