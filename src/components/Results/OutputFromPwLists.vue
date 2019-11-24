@@ -7,30 +7,24 @@
                 <p>{{ password }}</p>
             </div>
         </div>
-        <b-button class="button-colorful rounded w-full text-white py-2 font-bold border-none my-3">
-            Download
-        </b-button>
       </div>
     </div>
 </template>
 
 <script>
 export default {
+    props:['data'],
     data(){
         return{
-            password_lists: [
-                "toon",
-                "toom",
-                "tokj",
-                "tolk",
-                "talk",
-                "tyyt",
-                "tiok",
-                "trie",
-                "trit",
-                "tyuj"
-            ]
+            data1:this.data,
+            password_lists: []
         }
+    },
+    mounted(){
+    for (let index = 0; index < this.data1['posible-key'].length; index++) {
+      this.result_dict.push(this.data1['from-badpassword'][index])
+      
+    }
     }
 }
 </script>

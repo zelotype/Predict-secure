@@ -21,6 +21,8 @@ export default new Router({
         },
         {
 			path: "/result",
+			name:"/result",
+			props:true,
 			component: () => import("./components/Results/Result.vue")
 		},
 		{

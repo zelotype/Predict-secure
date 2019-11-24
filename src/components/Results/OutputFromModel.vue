@@ -24,11 +24,6 @@
                 cols="auto"
                 class="text-center px-px py-px"
               >
-                <b-button
-                  class="model-btn text-black focus:bg-green-400 hover:text-black border-transparent hover:border-gray-300"
-                  v-on:click="changeAlp(element, index)"
-                  >{{ element }}</b-button
-                >
               </b-col>
             </b-row>
           </b-popover>
@@ -40,25 +35,12 @@
 
 <script>
 export default {
+  props:['data'],
   data() {
     return {
+      data1:this.data,
       results: [
-        {
-          model: "h",
-          nearAlp: ["g", "t", "y", "u", "j", "m", "n", "b"]
-        },
-        {
-          model: "a",
-          nearAlp: ["q", "w", "s", "x", "z"]
-        },
-        {
-          model: "r",
-          nearAlp: ["e", "t", "g", "f", "d"]
-        },
-        {
-          model: "u",
-          nearAlp: ["y", "i", "k", "j", "h"]
-        }
+        
       ]
     };
   },
@@ -66,6 +48,13 @@ export default {
     changeAlp(alp, index){
       this.results[index].model = alp
     }
+  },
+  mounted(){
+    for (let index = 0; index < this.data1['posible-key'].length; index++) {
+      this.results.push({model:this.data1['from-model'][index],nearAlp:this.data1['posible-key'][index]})
+      
+    }
+    
   }
 };
 </script>

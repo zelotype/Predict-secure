@@ -7,31 +7,27 @@
                 <p>{{ word }}</p>
             </div>
         </div>
-        <b-button class="button-colorful rounded w-full text-white py-2 font-bold my-3 border-none">
-            Download
-        </b-button>
       </div>
     </div>
 </template>
 
 <script>
 export default {
+    props:['data'],
     data(){
         return{
+            data1:this.data,
             result_dict: [
-                "hello",
-                "bello",
-                "sello",
-                "rello",
-                "sdfsd",
-                "eorgk",
-                "sdfsd",
-                "sdfas",
-                "uouio",
-                "dgojf"
             ]
         }
+    },
+    mounted(){
+    for (let index = 0; index < this.data1['posible-key'].length; index++) {
+      this.result_dict.push(this.data1['from-spellcorrection'][index])
+      
     }
+    
+  }
 };
 </script>
 
