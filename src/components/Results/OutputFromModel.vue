@@ -24,6 +24,11 @@
                 cols="auto"
                 class="text-center px-px py-px"
               >
+              <b-button
+                  class="model-btn text-black focus:bg-green-400 hover:text-black border-transparent hover:border-gray-300"
+                  v-on:click="changeAlp(element, index)"
+                  >{{ element }}</b-button
+                >
               </b-col>
             </b-row>
           </b-popover>
